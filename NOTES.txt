@@ -1,0 +1,21 @@
+* http://docs.sqlalchemy.org/en/latest/orm/tutorial.html
+
+Person - id, name, email, created_date, end_date, is_member
+AccessToken - person_id, type, id
+Allowed - person_id, accessible_thing_id, is_admin
+AccessibleThing - id, name
+Dues - person_id, for_month, is_paid, paid_on_date, amount
+
+API:
+* add_member(
+* update_member
+* list_members
+* add_token
+* update_token
+* add_thing
+* add_access
+* revoke_access
+* check_access
+
+Auth:
+* to add a new member, you need to be an is_admin for the members thing, and identify with one of your tokens
