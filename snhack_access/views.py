@@ -7,6 +7,11 @@ from .models import (
     Person,
 )
 
+@view_config(route_name='home',
+             renderer='snhack_access:templates/home.pt')
+def index_page(request):
+    return {}
+
 @view_config(route_name='list_members',
              renderer='json',
              request_method='GET')
